@@ -124,20 +124,6 @@ class CustomerOrderList(APIView):
 
 
 
-'''    def post(self, request, *args, **kwargs):
-        customer_id = kwargs['customer_id']
-        product_id = kwargs['product_id']
-        customer = Customer.objects.get(pk=customer_id)
-        product = Product.objects.get(pk=product_id)
-       # data['customer_id'] = customer_id
-        #data['product_id'] = product_id
-        serializer = OrderSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save(customer=customer,product=product)
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST) 
-    
-        '''
 
 class PaymentList(APIView):
     def post(self, request, *args, **kwargs):
